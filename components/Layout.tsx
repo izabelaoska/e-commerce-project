@@ -1,12 +1,15 @@
-import React from "react"
+import React, { PropsWithChildren } from "react"
 import { Navbar } from "./Navbar"
 
-export const Layout = ({ children }) => {
+export const Layout: React.FC<PropsWithChildren> = ({
+  children,
+}) => {
   return (
-    <div>
+    <div className="min-h-screen h-1">
       <Navbar />
-      {children}
-      <div>The rest of the app</div>
+      <main className="container px-4 mx-auto h-full pt-32">
+        {children}
+      </main>
     </div>
   )
 }
