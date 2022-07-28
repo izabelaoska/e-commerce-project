@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.navbar-title {
+.navbar-title,
+.hero-title {
   font-family: "Staatliches", cursive;
 }
