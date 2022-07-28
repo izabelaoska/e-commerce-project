@@ -1,6 +1,6 @@
 import React from "react"
 
-const MotificationLogo = () => {
+const NotificationLogo = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ export const Notifications = () => {
   return (
     <button className="btn btn-ghost btn-circle">
       <div className="indicator">
-        <MotificationLogo />
+        <NotificationLogo />
         <span className="badge badge-xs badge-primary indicator-item"></span>
       </div>
     </button>
