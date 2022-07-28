@@ -14,7 +14,7 @@ export default function Document() {
           crossOrigin
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
           rel="stylesheet"
         />
       </Head>

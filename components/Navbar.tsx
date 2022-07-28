@@ -7,8 +7,8 @@ export const Navbar = () => {
   return (
     <header className="bg-gray-900 text-white shadow-xl fixed w-full">
       <nav className="container px-4 mx-auto navbar">
-        <div className="navbar-start gap-8">
-          <a className="normal-case text-2xl">E-Commerce</a>
+        <div className="navbar-start navbar-title">
+          <a className="normal-case text-4xl">E-Commerce</a>
         </div>
         <div className="navbar-end gap-2">
           <Search />

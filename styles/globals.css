@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Tajawal", sans-serif;
+.navbar-title {
+  font-family: "Staatliches", cursive;
 }
