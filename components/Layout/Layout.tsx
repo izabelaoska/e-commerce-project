@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react"
-import { Hero } from "./Hero"
-import { Navbar } from "./Navbar"
-import { NewProduct } from "./NewProduct"
+import { Hero } from "../Hero/Hero"
+import { Navbar } from "../Navbar/Navbar"
+import { NewProduct } from "../NewProduct/NewProduct"
 
 export const Layout: React.FC<PropsWithChildren> = ({
   children,
