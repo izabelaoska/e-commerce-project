@@ -2,7 +2,10 @@ import React from "react"
 
 export const Hero = () => {
   return (
-    <div className="hero min-h-screen bg-[#FFDFD3]">
+    <div
+      className="hero bg-[#FFDFD3]"
+      style={{ height: 550 }}
+    >
       <div className="hero-content text-center">
         <div className="max-w-md">
           <h1 className="font-header text-5xl font-bold">
