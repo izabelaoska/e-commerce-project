@@ -6,3 +6,8 @@
 .hero-title {
   font-family: "Staatliches", cursive;
 }
+
+.hero-mid-title,
+.new-product-title {
+  font-family: "Edu QLD Beginner", cursive;
+}

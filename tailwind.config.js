@@ -5,7 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        header: ["Staatliches"],
+        subHeader: ["Edu QLD Beginner"],
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
