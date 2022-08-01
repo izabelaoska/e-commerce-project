@@ -12,7 +12,7 @@ export const OurProducts = () => {
     "https://www.frankbody.com/uk/wp-content/uploads/2021/05/frank-body-everyday-in-shower-moisturiser_DOT.COM_ROLL-OVER-MODEL.jpg"
 
   return (
-    <div className="">
+    <div>
       <div className="mt-16 font-header text-3xl text-center">
         OUR PRODUCTS
       </div>
@@ -20,7 +20,7 @@ export const OurProducts = () => {
         className="grid grid-cols-4 gap-4 mt-16 items-stretch"
         style={{ height: 450 }}
       >
-        <div>
+        <div className="mb-16">
           <div className="w-full h-full relative">
             <Image
               src={image1}
@@ -36,8 +36,7 @@ export const OurProducts = () => {
             Add to cart | £11.95
           </button>
         </div>
-        <div>
-          {" "}
+        <div className="mb-16">
           <div className="w-full h-full relative">
             <Image
               src={image2}
@@ -53,7 +52,7 @@ export const OurProducts = () => {
             Add to cart | £15.95
           </button>
         </div>
-        <div>
+        <div className="mb-16">
           <div className="w-full h-full relative">
             <Image
               src={image3}
@@ -69,7 +68,7 @@ export const OurProducts = () => {
             Add to cart | £13.95
           </button>
         </div>
-        <div>
+        <div className="mb-16">
           <div className="w-full h-full relative">
             <Image
               src={image4}
