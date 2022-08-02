@@ -13,10 +13,6 @@ export const Layout: React.FC<PropsWithChildren> = ({
       <Navbar />
       <main className="container px-4 mx-auto h-full pt-32 mb-16">
         {children}
-        <Hero />
-        <NewProduct />
-        <OurProducts />
-        <Footer />
       </main>
     </div>
   )

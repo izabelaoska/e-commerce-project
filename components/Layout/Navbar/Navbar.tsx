@@ -2,6 +2,7 @@ import { Basket } from "./Basket"
 import { Notifications } from "./Notifications"
 import { Search } from "./Search"
 import { SignIn } from "./SignIn"
+import Link from "next/link"
 
 export const Navbar = () => {
   return (
@@ -13,7 +14,9 @@ export const Navbar = () => {
         <div className="navbar-end gap-2">
           <Search />
           <Notifications />
-          <Basket />
+          <Link href="/basket">
+            <Basket />
+          </Link>
           <SignIn />
         </div>
       </nav>
