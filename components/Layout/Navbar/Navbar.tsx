@@ -11,7 +11,7 @@ export const Navbar = () => {
         <div className="navbar-start navbar-title">
           <a className="normal-case text-4xl">E-Commerce</a>
         </div>
-        <div className="navbar-end gap-2">
+        <div className="navbar-end gap-1">
           <Search />
           <Notifications />
           <Link href="/basket">
