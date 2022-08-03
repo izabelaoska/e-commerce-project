@@ -24,7 +24,7 @@ export const Notifications = () => {
     <button className="btn btn-ghost btn-circle">
       <div className="indicator">
         <NotificationLogo />
-        <span className="badge badge-xs badge-primary indicator-item"></span>
+        {/* <span className="badge badge-xs badge-primary indicator-item"></span> */}
       </div>
     </button>
   )

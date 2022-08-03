@@ -1,16 +1,10 @@
 import Image from "next/image"
-import React from "react"
+import React, { useState } from "react"
+import { allItems } from "../../../data"
 
 export const OurProducts = () => {
-  const image1 =
-    "https://www.frankbody.com/uk/wp-content/uploads/2020/08/frank-body-charcoal-scrub-mask_DOT.COM_ROLL-OVER-MODEL.jpg"
-  const image2 =
-    "https://www.frankbody.com/uk/wp-content/uploads/2021/06/frank-body-AHA-body-lotion_DOT.COM_ROLL-OVER-PRODUCT-V2.jpg"
-  const image3 =
-    "https://www.frankbody.com/uk/wp-content/uploads/2021/01/frank-body-everyday-extra-clean-face-wash_DOT.COM_ROLL-OVER-MODEL.jpg"
-  const image4 =
-    "https://www.frankbody.com/uk/wp-content/uploads/2021/05/frank-body-everyday-in-shower-moisturiser_DOT.COM_ROLL-OVER-MODEL.jpg"
-
+  const [basket, setBasket] = useState()
+  const { img, title, price } = allItems
   return (
     <div>
       <div className="mt-16 font-header text-3xl text-center">
@@ -23,7 +17,7 @@ export const OurProducts = () => {
         <div className="mb-16">
           <div className="w-full h-full relative">
             <Image
-              src={image1}
+              src={allItems[0].img}
               alt="image1"
               layout="fill"
               objectFit="cover"
@@ -33,13 +27,13 @@ export const OurProducts = () => {
             Charcoal Body Scrub & Mask
           </div>
           <button className="btn bg-[#3F2A2D] rounded-none w-full hover:bg-[#FDE1DD] border-none hover:text-[#3F2A2D]">
-            Add to cart | £11.95
+            Add to cart | £{allItems[0].price}
           </button>
         </div>
         <div className="mb-16">
           <div className="w-full h-full relative">
             <Image
-              src={image2}
+              src={allItems[1].img}
               alt="image1"
               layout="fill"
               objectFit="cover"
@@ -49,13 +43,13 @@ export const OurProducts = () => {
             Smoothing AHA Body Lotion
           </div>
           <button className="btn bg-[#3F2A2D] rounded-none w-full hover:bg-[#FDE1DD] border-none hover:text-[#3F2A2D]">
-            Add to cart | £15.95
+            Add to cart | £{allItems[1].price}
           </button>
         </div>
         <div className="mb-16">
           <div className="w-full h-full relative">
             <Image
-              src={image3}
+              src={allItems[2].img}
               alt="image1"
               layout="fill"
               objectFit="cover"
@@ -65,13 +59,13 @@ export const OurProducts = () => {
             Extra Clean Face Wash
           </div>
           <button className="btn bg-[#3F2A2D] rounded-none w-full hover:bg-[#FDE1DD] border-none hover:text-[#3F2A2D]">
-            Add to cart | £13.95
+            Add to cart | £{allItems[2].price}
           </button>
         </div>
         <div className="mb-16">
           <div className="w-full h-full relative">
             <Image
-              src={image4}
+              src={allItems[3].img}
               alt="image1"
               layout="fill"
               objectFit="cover"
@@ -81,7 +75,7 @@ export const OurProducts = () => {
             In-Shower Moisturiser
           </div>
           <button className="btn bg-[#3F2A2D] rounded-none w-full hover:bg-[#FDE1DD] border-none hover:text-[#3F2A2D]">
-            Add to cart | £21.95
+            Add to cart | £{allItems[3].price}
           </button>
         </div>
       </div>
