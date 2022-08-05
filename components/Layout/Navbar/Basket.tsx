@@ -3,6 +3,54 @@ import { useBasketStore } from "../../../store"
 
 export const Basket = () => {
   const { items } = useBasketStore((state) => state)
+
+  const singleItem = () => {
+    if (items.length === 1) {
+      return `${items.length} Item`
+    } else {
+      return `${items.length} Items`
+    }
+  }
+
+  const emptyBasket = () => {
+    if (items.length === 0) {
+      return (
+        <div
+          tabIndex={0}
+          className="h-40 mt-3 shadow card card-compact dropdown-content w-52 bg-base-100"
+        >
+          <div className="flex items-center justify-center card-body">
+            <span className="text-xl text-center text-gray-900">
+              Your basket is empty!
+            </span>
+            <div className="card-actions"></div>
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <div
+          tabIndex={0}
+          className="mt-3 shadow card card-compact dropdown-content w-52 bg-base-100"
+        >
+          <div className="text-gray-900 card-body">
+            <span className="text-lg font-bold">
+              {singleItem()}
+            </span>
+            <span className="text-info">Subtotal: $0</span>
+            <div className="card-actions">
+              <Link href="/basket">
+                <button className="btn btn-primary btn-block">
+                  View cart
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )
+    }
+  }
+
   function renderBasketLogo() {
     return (
       <div className="indicator">
@@ -34,22 +82,7 @@ export const Basket = () => {
       >
         {renderBasketLogo()}
       </label>
-      <div
-        tabIndex={0}
-        className="mt-3 shadow card card-compact dropdown-content w-52 bg-base-100"
-      >
-        <div className="text-gray-900 card-body">
-          <span className="text-lg font-bold">8 Items</span>
-          <span className="text-info">Subtotal: $999</span>
-          <div className="card-actions">
-            <Link href="/basket">
-              <button className="btn btn-primary btn-block">
-                View cart
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
+      {emptyBasket()}
     </div>
   )
 }
