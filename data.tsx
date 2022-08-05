@@ -1,4 +1,4 @@
-type cartItems = {
+type CartItems = {
   id: number
   title: string
   price: number
@@ -6,7 +6,7 @@ type cartItems = {
   amount: number
 }
 
-export const allItems = [
+export const allItems: CartItems[] = [
   {
     id: 1,
     title: "Charcoal Body Scrub & Mask",
