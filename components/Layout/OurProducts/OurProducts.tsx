@@ -26,7 +26,12 @@ export const OurProducts = () => {
             Charcoal Body Scrub & Mask
           </div>
           <button
-            onClick={() => addItem("mask")}
+            onClick={() =>
+              addItem({
+                title: "body mask",
+                price: 11.99,
+              })
+            }
             className="btn bg-[#3F2A2D] rounded-none w-full hover:bg-[#FDE1DD] border-none hover:text-[#3F2A2D]"
           >
             Add to cart | £{allItems[0].price}
@@ -45,7 +50,12 @@ export const OurProducts = () => {
             Smoothing AHA Body Lotion
           </div>
           <button
-            onClick={() => addItem("body lotion")}
+            onClick={() =>
+              addItem({
+                title: "body lotion",
+                price: 11.99,
+              })
+            }
             className="btn bg-[#3F2A2D] rounded-none w-full hover:bg-[#FDE1DD] border-none hover:text-[#3F2A2D]"
           >
             Add to cart | £{allItems[1].price}
@@ -64,7 +74,12 @@ export const OurProducts = () => {
             Extra Clean Face Wash
           </div>
           <button
-            onClick={() => addItem("face wash")}
+            onClick={() =>
+              addItem({
+                title: "face wash",
+                price: 11.99,
+              })
+            }
             className="btn bg-[#3F2A2D] rounded-none w-full hover:bg-[#FDE1DD] border-none hover:text-[#3F2A2D]"
           >
             Add to cart | £{allItems[2].price}
@@ -83,7 +98,12 @@ export const OurProducts = () => {
             In-Shower Moisturiser
           </div>
           <button
-            onClick={() => addItem("moisturiser")}
+            onClick={() =>
+              addItem({
+                title: "moisturizer",
+                price: 11.99,
+              })
+            }
             className="btn bg-[#3F2A2D] rounded-none w-full hover:bg-[#FDE1DD] border-none hover:text-[#3F2A2D]"
           >
             Add to cart | £{allItems[3].price}

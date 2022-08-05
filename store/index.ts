@@ -1,9 +1,13 @@
 import create from "zustand"
 import { devtools } from "zustand/middleware"
 
+type Product = {
+  title: string
+  price: number
+}
 interface BasketStore {
-  items: string[]
-  addItem: (item: string) => void
+  items: Product[]
+  addItem: (item: Product) => void
 }
 
 export const useBasketStore = create<BasketStore>()(

@@ -5,9 +5,9 @@ export const Layout: React.FC<PropsWithChildren> = ({
   children,
 }) => {
   return (
-    <div className="min-h-screen h-auto">
+    <div className="h-auto min-h-screen">
       <Navbar />
-      <main className="container px-4 mx-auto h-full pt-32 mb-16">
+      <main className="container h-full px-4 pt-32 mx-auto mb-16">
         {children}
       </main>
     </div>

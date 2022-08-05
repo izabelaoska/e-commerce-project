@@ -4,6 +4,15 @@ import { useBasketStore } from "../../../store"
 export const Basket = () => {
   const { items } = useBasketStore((state) => state)
 
+  const subtotal = items.reduce(
+    (acc, next) => {
+      return {
+        price: acc.price + next.price,
+      }
+    },
+    { price: 0 }
+  )
+
   const singleItem = () => {
     if (items.length === 1) {
       return `${items.length} Item`
@@ -17,7 +26,7 @@ export const Basket = () => {
       return (
         <div
           tabIndex={0}
-          className="h-40 mt-3 shadow card card-compact dropdown-content w-52 bg-base-100"
+          className="h-32 mt-3 shadow card card-compact dropdown-content w-52 bg-base-100"
         >
           <div className="flex items-center justify-center card-body">
             <span className="text-xl text-center text-gray-900">
@@ -37,7 +46,9 @@ export const Basket = () => {
             <span className="text-lg font-bold">
               {singleItem()}
             </span>
-            <span className="text-info">Subtotal: $0</span>
+            <span className="text-lg text-gray-900">
+              Subtotal: ${subtotal.price}
+            </span>
             <div className="card-actions">
               <Link href="/basket">
                 <button className="btn btn-primary btn-block">
