@@ -4,11 +4,11 @@ export const BasketCard: FC<PropsWithChildren> = ({
   children,
 }) => {
   return (
-    <div className="w-[700px] px-16 py-12 m-auto border-2">
-      <p className="text-4xl font-subHeader">
+    <div className="w-[500px] px-10 py-12 m-auto rounded-3xl bg-[#FDE1DD]">
+      <p className="text-3xl font-subHeader">
         Your basket:
       </p>
-      <div className="pt-12 ">{children}</div>
+      <div className="pt-10">{children}</div>
     </div>
   )
 }

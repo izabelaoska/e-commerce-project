@@ -27,21 +27,31 @@ export const BasketItems = () => {
         <div>
           {items.map((item) => {
             return (
-              <div className="flex gap-8" key={item.title}>
+              <div
+                className="grid grid-cols-3 gap-4"
+                key={item.title}
+              >
                 <div
-                  className="basket-item"
+                  className="grid col-span-2 text-lg basket-item justify-items-start font-subHeader"
                   key={item.title}
                 >
                   {item.title}
                 </div>
-                <div className="basket-item">
+                <div className="grid text-lg basket-item justify-items-end font-subHeader">
                   {item.price}
                 </div>
               </div>
             )
           })}
-          <div className="flex pt-14">
-            Total: £{subtotal.price.toFixed(2)}
+          <div className="grid grid-cols-2 gap-10 pt-10">
+            <div className="flex items-end text-2xl font-subHeader">
+              Total: £{subtotal.price.toFixed(2)}
+            </div>
+            <div className="flex items-end justify-end">
+              <button className="btn btn-primary bg-[#111827] border-none hover:bg-[#111827]">
+                Checkout
+              </button>
+            </div>
           </div>
         </div>
       </BasketCard>

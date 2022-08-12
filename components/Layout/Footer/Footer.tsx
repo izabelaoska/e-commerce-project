@@ -2,7 +2,7 @@ import React from "react"
 
 export const Footer = () => {
   return (
-    <footer className="footer p-20 text-base-content mt-32 bg-[#FFDDDD]">
+    <footer className="footer p-20 text-base-content mt-20 bg-[#FFDDDD]">
       <div>
         <span className="footer-title font-header text-2xl text-[#3F2A2D]">
           Services
@@ -43,7 +43,7 @@ export const Footer = () => {
             <input
               type="text"
               placeholder="username@site.com"
-              className="input input-bordered w-full pr-16"
+              className="w-full pr-16 input input-bordered"
             />
             <button className="btn btn-primary bg-[#3F2A2D] hover:bg-[#3F2A2D] absolute top-0 right-0 rounded-l-none border-none">
               Subscribe
@@ -52,7 +52,7 @@ export const Footer = () => {
               <span className="py-6 font-header text-2xl text-[#9F8486]">
                 JOIN #THEFRANKEFFECT
               </span>
-              <div className="flex gap-x-6 pt-2">
+              <div className="flex pt-2 gap-x-6">
                 <a>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

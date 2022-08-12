@@ -10,11 +10,11 @@ export const OurProducts = () => {
         OUR PRODUCTS
       </div>
       <div
-        className="grid items-stretch grid-cols-4 gap-4 mt-16"
-        style={{ height: 450 }}
+        className="grid items-stretch grid-cols-1 gap-4 mt-16 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4"
+        style={{ minHeight: 450 }}
       >
-        <div className="mb-16">
-          <div className="relative w-full h-full">
+        <div>
+          <div className="relative w-full h-[450px]">
             <Image
               src={allItems[0].img}
               alt="image1"
@@ -37,8 +37,8 @@ export const OurProducts = () => {
             Add to cart | £{allItems[0].price}
           </button>
         </div>
-        <div className="mb-16">
-          <div className="relative w-full h-full">
+        <div>
+          <div className="relative w-full h-[450px]">
             <Image
               src={allItems[1].img}
               alt="image1"
@@ -61,8 +61,8 @@ export const OurProducts = () => {
             Add to cart | £{allItems[1].price}
           </button>
         </div>
-        <div className="mb-16">
-          <div className="relative w-full h-full">
+        <div>
+          <div className="relative w-full h-[450px]">
             <Image
               src={allItems[2].img}
               alt="image1"
@@ -85,8 +85,8 @@ export const OurProducts = () => {
             Add to cart | £{allItems[2].price}
           </button>
         </div>
-        <div className="mb-16">
-          <div className="relative w-full h-full">
+        <div>
+          <div className="relative w-full h-[450px]">
             <Image
               src={allItems[3].img}
               alt="image1"
