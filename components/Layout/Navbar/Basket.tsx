@@ -15,9 +15,9 @@ export const Basket = () => {
 
   const singleItem = () => {
     if (items.length === 1) {
-      return `${items.length} Item`
+      return `Your bag: ${items.length} Item`
     } else {
-      return `${items.length} Items`
+      return `Your bag: ${items.length} Items`
     }
   }
 
@@ -29,7 +29,7 @@ export const Basket = () => {
           className="h-32 mt-3 shadow card card-compact dropdown-content w-52 bg-base-100"
         >
           <div className="flex items-center justify-center card-body">
-            <span className="text-xl text-center text-gray-900">
+            <span className="text-xl text-center text-gray-900 font-subHeader">
               Your basket is empty!
             </span>
             <div className="card-actions"></div>
@@ -43,16 +43,16 @@ export const Basket = () => {
           className="mt-3 shadow card card-compact dropdown-content w-52 bg-base-100"
         >
           <div className="text-gray-900 card-body">
-            <span className="text-lg font-bold">
+            <span className="py-2 text-lg font-bold font-subHeader">
               {singleItem()}
             </span>
-            <span className="text-lg text-gray-900">
-              Subtotal: ${subtotal.price}
+            <span className="pb-2 text-lg text-gray-900 font-subHeader">
+              Subtotal: £{subtotal.price}
             </span>
             <div className="card-actions">
               <Link href="/basket">
-                <button className="btn btn-primary btn-block">
-                  View cart
+                <button className="btn btn-primary btn-block btn-sm">
+                  View basket
                 </button>
               </Link>
             </div>
