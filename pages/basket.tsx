@@ -7,6 +7,16 @@ import { useBasketStore } from "../store"
 
 export const BasketItems = () => {
   const { items } = useBasketStore()
+
+  let subtotal = items.reduce(
+    (acc, next) => {
+      return {
+        price: acc.price + next.price,
+      }
+    },
+    { price: 0 }
+  )
+
   return (
     <Layout>
       <Head>
@@ -17,12 +27,22 @@ export const BasketItems = () => {
         <div>
           {items.map((item) => {
             return (
-              <div key={item.title}>
-                <div key={item.title}>{item.title}</div>
-                <div>{item.price}</div>
+              <div className="flex gap-8" key={item.title}>
+                <div
+                  className="basket-item"
+                  key={item.title}
+                >
+                  {item.title}
+                </div>
+                <div className="basket-item">
+                  {item.price}
+                </div>
               </div>
             )
           })}
+          <div className="flex pt-14">
+            Total: £{subtotal.price.toFixed(2)}
+          </div>
         </div>
       </BasketCard>
     </Layout>

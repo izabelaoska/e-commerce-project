@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.navbar-title,
-.hero-title {
+.navbar-title {
   font-family: "Staatliches", cursive;
 }
 
-.hero-mid-title,
-.new-product-title {
-  font-family: "Edu QLD Beginner", cursive;
+.basket-item {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
