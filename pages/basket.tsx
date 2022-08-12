@@ -1,6 +1,7 @@
 import Head from "next/head"
 import { title } from "process"
 import React from "react"
+import { FaMoneyCheck } from "react-icons/fa"
 import { Layout } from "../components"
 import { BasketCard } from "../components/Layout/Navbar/BasketCard"
 import { useBasketStore } from "../store"
@@ -44,14 +45,12 @@ export const BasketItems = () => {
             )
           })}
           <div className="grid grid-cols-2 gap-10 pt-10">
-            <div className="flex items-end text-2xl font-subHeader">
+            <div className="flex items-end text-xl font-subHeader">
               Total: £{subtotal.price.toFixed(2)}
             </div>
-            <div className="flex items-end justify-end">
-              <button className="btn btn-primary bg-[#111827] border-none hover:bg-[#111827]">
-                Checkout
-              </button>
-            </div>
+          </div>
+          <div className="mt-2 font-subHeader">
+            Shipping calculated at next step
           </div>
         </div>
       </BasketCard>
