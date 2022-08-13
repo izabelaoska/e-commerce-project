@@ -2,12 +2,13 @@ import Head from "next/head"
 import Link from "next/link"
 import React from "react"
 import { BsArrowReturnLeft } from "react-icons/bs"
+import { RiDeleteBin6Line } from "react-icons/ri"
 import { Layout } from "../components"
 import { BasketCard } from "../components/Layout/Navbar/BasketCard"
 import { useBasketStore } from "../store"
 
 export const BasketItems = () => {
-  const { items } = useBasketStore()
+  const { items, removeItem } = useBasketStore()
 
   let subtotal = items.reduce(
     (acc, next) => {
@@ -38,8 +39,15 @@ export const BasketItems = () => {
                 >
                   {item.title}
                 </div>
-                <div className="grid text-lg basket-item justify-items-end font-subHeader">
+                <div className="grid grid-cols-2 text-lg basket-item justify-items-end font-subHeader">
                   {item.price}
+                  <button
+                    onClick={() => {
+                      removeItem(item.id)
+                    }}
+                  >
+                    <RiDeleteBin6Line />
+                  </button>
                 </div>
               </div>
             )

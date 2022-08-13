@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { allItems } from "../../../data"
 import { useBasketStore } from "../../../store"
+import { v4 as uuidv4 } from "uuid"
 
 export const OurProducts = () => {
   const { addItem } = useBasketStore((state) => state)
@@ -30,6 +31,7 @@ export const OurProducts = () => {
               addItem({
                 title: "Charcoal Body Scrub & Mask",
                 price: 11.95,
+                id: uuidv4(),
               })
             }
             className="btn bg-[#3F2A2D] rounded-none w-full hover:bg-[#FDE1DD] border-none hover:text-[#3F2A2D]"
@@ -54,6 +56,7 @@ export const OurProducts = () => {
               addItem({
                 title: "Smoothing AHA Body Lotion",
                 price: 15.95,
+                id: uuidv4(),
               })
             }
             className="btn bg-[#3F2A2D] rounded-none w-full hover:bg-[#FDE1DD] border-none hover:text-[#3F2A2D]"
@@ -78,6 +81,7 @@ export const OurProducts = () => {
               addItem({
                 title: "Extra Clean Face Wash",
                 price: 13.95,
+                id: uuidv4(),
               })
             }
             className="btn bg-[#3F2A2D] rounded-none w-full hover:bg-[#FDE1DD] border-none hover:text-[#3F2A2D]"
@@ -102,6 +106,7 @@ export const OurProducts = () => {
               addItem({
                 title: "In-Shower Moisturiser",
                 price: 21.95,
+                id: uuidv4(),
               })
             }
             className="btn bg-[#3F2A2D] rounded-none w-full hover:bg-[#FDE1DD] border-none hover:text-[#3F2A2D]"

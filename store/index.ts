@@ -4,10 +4,12 @@ import { devtools } from "zustand/middleware"
 type Product = {
   title: string
   price: number
+  id: string
 }
 interface BasketStore {
   items: Product[]
   addItem: (item: Product) => void
+  removeItem: (id: string) => void
 }
 
 export const useBasketStore = create<BasketStore>()(
@@ -21,5 +23,11 @@ export const useBasketStore = create<BasketStore>()(
         false,
         "addItem"
       ),
+    removeItem: (id) =>
+      set((state) => ({
+        items: state.items.filter(
+          (element) => element.id !== id
+        ),
+      })),
   }))
 )
