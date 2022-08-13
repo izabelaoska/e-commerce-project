@@ -1,7 +1,7 @@
 import Head from "next/head"
-import { title } from "process"
+import Link from "next/link"
 import React from "react"
-import { FaMoneyCheck } from "react-icons/fa"
+import { BsArrowReturnLeft } from "react-icons/bs"
 import { Layout } from "../components"
 import { BasketCard } from "../components/Layout/Navbar/BasketCard"
 import { useBasketStore } from "../store"
@@ -54,6 +54,14 @@ export const BasketItems = () => {
           </div>
         </div>
       </BasketCard>
+      <Link href="/">
+        <div className="flex items-end justify-center mt-10">
+          <button className="font-medium bg-[#3F2A2D] border-none btn btn-primary gap-x-2 hover:bg-[#3F2A2D]">
+            <BsArrowReturnLeft className="text-lg" />
+            <span>Back to mainpage</span>
+          </button>
+        </div>
+      </Link>
     </Layout>
   )
 }

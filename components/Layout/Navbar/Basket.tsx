@@ -43,11 +43,11 @@ export const Basket = () => {
           className="mt-3 shadow card card-compact dropdown-content w-52 bg-base-100"
         >
           <div className="text-gray-900 card-body">
-            <span className="py-2 text-lg font-bold font-subHeader">
+            <span className="py-2 text-xl font-bold font-subHeader">
               {singleItem()}
             </span>
             <span className="pb-2 text-lg text-gray-900 font-subHeader">
-              Subtotal: £{subtotal.price}
+              Subtotal: £{subtotal.price.toFixed(2)}
             </span>
             <div className="card-actions">
               <Link href="/basket">
