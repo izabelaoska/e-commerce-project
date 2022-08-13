@@ -10,15 +10,15 @@ export const NewProduct = () => {
       style={{ height: 550 }}
     >
       <div className="bg-[#FDE1DD] flex flex-col space-y-6 items-center justify-center">
-        <div className="font-subHeader text-xl">
+        <div className="text-xl font-subHeader">
           Say bye to body breakouts with my acne-fighting
           body wash.
         </div>
-        <button className="btn btn-primary bg-gray-800 border-none hover:bg-gray-800">
+        <button className="bg-gray-800 border-none btn btn-primary hover:bg-gray-800 font-subHeader">
           Explore
         </button>
       </div>
-      <div className="my-auto mx-auto relative w-full h-full">
+      <div className="relative w-full h-full mx-auto my-auto">
         <Image
           objectFit="cover"
           src={img}

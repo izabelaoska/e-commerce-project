@@ -6,10 +6,22 @@ import {
   FaCcPaypal,
   FaMoneyCheck,
 } from "react-icons/fa"
+import { useBasketStore } from "../../../store/"
 
 export const BasketCard: FC<PropsWithChildren> = ({
   children,
 }) => {
+  const { items } = useBasketStore((state) => state)
+
+  if (items.length === 0) {
+    return (
+      <div className="w-[400px] h-[200px] pt-20 m-auto rounded-3xl">
+        <h1 className="flex items-center justify-center text-2xl font-subHeader">
+          <h2>Your basket is currently empty!</h2>
+        </h1>
+      </div>
+    )
+  }
   return (
     <div className="w-[500px] px-10 py-12 m-auto rounded-3xl bg-[#FDE1DD]">
       <p className="text-2xl font-subHeader">

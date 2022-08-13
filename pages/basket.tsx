@@ -64,8 +64,8 @@ export const BasketItems = () => {
       </BasketCard>
       <Link href="/">
         <div className="flex items-end justify-center mt-10">
-          <button className="font-medium bg-[#3F2A2D] border-none btn btn-primary gap-x-2 hover:bg-[#3F2A2D]">
-            <BsArrowReturnLeft className="text-lg" />
+          <button className="font-bold bg-[#3F2A2D] border-none btn btn-primary  gap-x-2 hover:bg-[#3F2A2D] font-subHeader">
+            <BsArrowReturnLeft className="text-xl" />
             <span>Back to mainpage</span>
           </button>
         </div>
