@@ -1,7 +1,7 @@
 import { Basket } from "./Basket"
 import { Notifications } from "./Notifications"
 import { Search } from "./Search"
-import { SignIn } from "./SignIn"
+import { SignIn } from "./SignUp"
 import Link from "next/link"
 
 export const Navbar = () => {
