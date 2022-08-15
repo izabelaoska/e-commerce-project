@@ -1,23 +1,23 @@
 import { Basket } from "./Basket"
 import { Notifications } from "./Notifications"
 import { Search } from "./Search"
-import { SignIn } from "./SignUp"
+import { OptionsDropdown } from "./OptionsDropdown"
 import Link from "next/link"
 
 export const Navbar = () => {
   return (
-    <header className="bg-gray-900 text-white shadow-xl fixed w-full z-10">
+    <header className="fixed z-10 w-full text-white bg-gray-900 shadow-xl">
       <nav className="container px-4 mx-auto navbar">
         <div className="navbar-start navbar-title">
-          <a className="normal-case text-4xl">E-Commerce</a>
+          <a className="text-4xl normal-case">E-Commerce</a>
         </div>
-        <div className="navbar-end gap-1">
+        <div className="gap-1 navbar-end">
           <Search />
           <Notifications />
           <Link href="/basket">
             <Basket />
           </Link>
-          <SignIn />
+          <OptionsDropdown />
         </div>
       </nav>
     </header>

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { BiUser } from "react-icons/bi"
 
-export const SignIn = () => {
+export const OptionsDropdown = () => {
   return (
     <div className="dropdown dropdown-end">
       <button
