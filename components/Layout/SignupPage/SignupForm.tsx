@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Layout } from "../Layout"
-import { postFormData } from "../../../utils/postFormData"
 
 const SignUpForm = () => {
   const [email, setEmail] = useState("")
@@ -9,17 +8,7 @@ const SignUpForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const formData = { email, password1, password2 }
-    const { response, result } = await postFormData(
-      formData,
-      "/api/signup"
-    )
-    console.log(
-      { response, result },
-      email,
-      password1,
-      password2
-    )
+    console.log(email, password1, password2)
     setEmail(""), setPassword1(""), setPassword2("")
   }
 
